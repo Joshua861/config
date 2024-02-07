@@ -1,0 +1,19 @@
+#!/run/current-system/sw/bin/bash
+
+# variables
+config=$HOME/.config/hypr
+scripts=$config/scripts
+
+# notification daemon
+dunst &
+
+# waybar
+waybar
+
+# other
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+
+waybar &
+swayosd &
+swww init; swww kill; swww init
