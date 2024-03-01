@@ -34,6 +34,5 @@ export PATH="~/Documents/shell_scripts/:$PATH"
 export BUN_INSTALL="$HOME/.reflex/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export NIXPKGS_ALLOW_INSECURE=1
-export OPEN_AI_KEY="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"
 
 starship init fish | source
